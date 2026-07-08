@@ -1,0 +1,21 @@
+Column,Data Type,Business Meaning,Silver Layer Notes
+Unnamed: 0,int64,Technical index created during CSV export,Remove during cleaning
+realSum,float64,Listing price,Target variable
+room_type,object,Type of accommodation,Categorical feature
+room_shared,bool,Whether the room is shared,Boolean feature
+room_private,bool,Whether the room is private,Boolean feature
+person_capacity,float64,Maximum guest capacity,Validate numeric consistency
+host_is_superhost,bool,Whether the host has Superhost status,Boolean feature
+multi,int64,Host owns multiple listings,Potential categorical feature
+biz,int64,Business listing indicator,Potential categorical feature
+cleanliness_rating,float64,Cleanliness score,Check valid range
+guest_satisfaction_overall,float64,Overall guest satisfaction,Check valid range
+bedrooms,int64,Number of bedrooms,Check for impossible values
+dist,float64,Distance from city center,Potential feature engineering
+metro_dist,float64,Distance to nearest metro station,Potential feature engineering
+attr_index,float64,Attractiveness index,Numeric feature
+attr_index_norm,float64,Normalized attractiveness index,Already normalized
+rest_index,float64,Restaurant index,Numeric feature
+rest_index_norm,float64,Normalized restaurant index,Already normalized
+lng,float64,Longitude,Geographic feature
+lat,float64,Latitude,Geographic feature

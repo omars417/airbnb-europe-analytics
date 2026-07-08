@@ -1,0 +1,251 @@
+Phase 1 — Dataset Inventory
+
+Understand what we received.
+
+Questions:
+
+How many datasets?
+Which cities?
+Weekday vs weekend?
+Number of rows per dataset
+Number of columns
+File sizes
+
+Deliverable:
+
+Dataset Inventory Table
+Phase 2 — Schema Consistency
+
+Questions:
+
+Do all datasets have identical columns?
+Any missing columns?
+Any extra columns?
+Any datatype inconsistencies?
+
+We already know one inconsistency exists:
+
+person_capacity
+
+float64
+
+↓
+
+int64
+
+(Berlin weekends)
+
+We'll verify whether there are others.
+
+Phase 3 — Missing Value Analysis
+
+Not just:
+
+How many?
+
+Instead:
+
+For every column:
+
+Missing count
+Missing %
+Which datasets are affected?
+
+Decision:
+
+Ignore
+
+↓
+
+Impute
+
+↓
+
+Drop
+
+↓
+
+Investigate
+Phase 4 — Duplicate Analysis
+
+Questions:
+
+Exact duplicate rows?
+Duplicate listings?
+Duplicate coordinates?
+Duplicate price/location combinations?
+
+Important:
+
+A duplicate listing is not always a duplicate row.
+
+We'll investigate carefully.
+
+Phase 5 — Data Types
+
+Questions:
+
+Are these correct?
+
+Price
+
+Capacity
+
+Ratings
+
+Booleans
+
+Coordinates
+
+Can any datatype be optimized?
+
+Example:
+
+room_type
+
+object
+
+↓
+
+category
+
+This reduces memory.
+
+Phase 6 — Statistical Summary
+
+For every numeric column:
+
+mean
+median
+std
+min
+max
+quartiles
+
+Purpose:
+
+Understand distributions before cleaning.
+
+Phase 7 — Outlier Detection
+
+Questions:
+
+Are there:
+
+Very expensive listings?
+
+Impossible distances?
+
+Negative values?
+
+Ratings outside expected ranges?
+
+We'll detect—not remove—at this stage.
+
+Phase 8 — Categorical Analysis
+
+Examples:
+
+room_type
+
+host_is_superhost
+
+room_private
+
+room_shared
+
+Questions:
+
+Unique values?
+
+Frequency?
+
+Unexpected categories?
+
+Phase 9 — Correlation Analysis
+
+This is probably the most important section.
+
+Business question:
+
+What actually influences Airbnb price?
+
+We'll analyze correlations between:
+
+Price
+
+↓
+
+Bedrooms
+
+↓
+
+Capacity
+
+↓
+
+Distance
+
+↓
+
+Ratings
+
+↓
+
+Restaurant index
+
+↓
+
+Attraction index
+
+This directly answers whether additional enrichment is justified.
+
+Phase 10 — Selenium Feasibility
+
+This is unique to our project.
+
+We need to answer:
+
+Does the dataset contain:
+
+Listing ID?
+Listing URL?
+Airbnb URL?
+Any unique identifier?
+
+If not...
+
+Can we reliably scrape?
+
+This determines whether enrichment.py is feasible as described.
+
+Phase 11 — Feature Engineering Brainstorm
+
+Before writing code, we'll identify potential features.
+
+Each one must answer:
+
+Feature	Business Question
+price_per_guest	Which listings offer the best value?
+price_per_bedroom	Are larger homes proportionally cheaper?
+distance_category	How does location affect price?
+metro_accessibility	Does public transport influence pricing?
+city	Which cities are more expensive?
+day_type	Weekend vs weekday pricing
+luxury_listing	Premium market segmentation
+
+We'll finalize these after reviewing the data.
+
+Phase 12 — Cleaning Decisions
+
+Only now do we decide:
+
+Should we:
+
+Remove duplicates?
+Impute values?
+Drop rows?
+Convert datatypes?
+Standardize categories?
+
+Every decision must reference evidence from the EDA.

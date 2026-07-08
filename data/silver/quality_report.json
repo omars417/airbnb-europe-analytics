@@ -1,0 +1,16 @@
+{
+    "rows": 51707,
+    "columns": 27,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "numeric_columns": 17,
+    "categorical_columns": 10,
+    "engineered_features": [
+        "price_per_guest",
+        "price_per_bedroom",
+        "distance_category",
+        "metro_accessibility",
+        "luxury_listing",
+        "city_price_tier"
+    ]
+}

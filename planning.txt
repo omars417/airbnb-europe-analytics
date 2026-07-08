@@ -1,0 +1,231 @@
+| Feature                    | Meaning                                  |
+| -------------------------- | ---------------------------------------- |
+| realSum                    | Listing price                            |
+| room_type                  | Entire home / Private room / Shared room |
+| room_shared                | Boolean  true if shared room             |
+| room_private               | Boolean  true if Private room            |
+| person_capacity            | Guests                                   |
+| host_is_superhost          | Superhost  is a highly rated host        |
+| multi                      | Multi-listing host                       |
+| biz                        | Business listing                         |
+| cleanliness_rating         | Rating                                   |
+| guest_satisfaction_overall | Satisfaction                             |
+| bedrooms                   | Bedrooms                                 |
+| dist                       | Distance from city center                |
+| metro_dist                 | Distance to metro                        |
+| attr_index                 | Attraction index                         |
+| rest_index                 | Restaurant index                         |
+| lat / lng                  | Coordinates                              |
+
+
+
+Here's the roadmap I propose
+Week 1
+Step 1
+
+EDA
+
+Understand every column
+
+Step 2
+
+Bronze Layer
+
+Raw ingestion
+
+No modification
+
+Metadata
+
+Logging
+
+Step 3
+
+Silver Layer
+
+Cleaning
+
+Duplicates
+
+Missing values
+
+Data validation
+
+Outlier handling
+
+Feature engineering
+
+City extraction
+
+Weekend/Weekday extraction
+
+Price per bedroom
+
+Price per guest
+
+Distance category
+
+Step 4
+
+Scraping
+
+Instead of scraping random things,
+
+I'll help you scrape only fields that actually improve the analysis.
+
+Step 5
+
+Master Dataset
+
+Append all cities
+
+Around 20k listings
+
+Step 6
+
+Gold Layer
+
+Proper Star Schema
+
+FactListing
+
+DimCity
+
+DimRoom
+
+DimHost
+
+DimDate
+
+DimLocation
+
+Maybe DimAmenities
+
+Step 7
+
+Power BI
+
+Professional dashboard
+
+Not just charts.
+
+Executive dashboard.
+-------------------------------------------------------------
+Session 1 (Today)
+
+✔ Understand dataset
+
+✔ Design project
+
+✔ Create folders
+
+✔ Explain architecture
+
+Time: about 1 hour
+
+Session 2
+
+Bronze Layer
+
+Explain ingestion
+
+Explain metadata
+
+Explain validation
+
+Write code together
+
+Time:
+
+2–3 hours
+
+Session 3
+
+Silver Layer
+
+Cleaning
+
+Feature engineering
+
+Validation
+
+Master dataset
+
+Time:
+
+4–6 hours
+
+Session 4
+
+Scraping
+
+This is probably the hardest part.
+
+We'll take our time.
+
+Time:
+
+4–8 hours
+
+depending on how much scraping we decide to do.
+
+Session 5
+
+SQL
+
+Star Schema
+
+Fact tables
+
+Dimension tables
+
+Keys
+
+Relationships
+
+Time:
+
+3–4 hours
+
+Session 6
+
+Power BI
+
+Dashboard
+
+KPIs
+
+Measures
+
+Interactive visuals
+
+Time:
+
+5–7 hours
+
+Session 7
+
+GitHub
+
+README
+
+Architecture diagram
+
+Documentation
+
+Screenshots
+
+Time:
+
+2–3 hours
+
+
+
+
+For every folder, script, SQL query, or Power BI visualization, I'll explain:
+
+Why are we creating it?
+Why do companies do it this way?
+Why are we using this instead of another approach?
+What is the minimum required for the internship?
+What extra are we adding to beat everyone else?
